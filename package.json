@@ -4,7 +4,7 @@
   "description": "react portfolio",
   "main": "script.js",
   "type": "module",
-  "homepage": "https://AverieMichel.github.io/my-portfolio",
+  "homepage": "https://averiemichel.github.io/my-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
