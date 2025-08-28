@@ -13,13 +13,21 @@ const apiKey = process.env.WEATHER_API_KEY;
 app.use(cors());
 // Parse JSON bodies
 
+// const db = new pg.Client({
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: 'portfolio',
+//     password: 'Averie1103',
+//     port: 5434,
+// });
+
+const connectionString = process.env.DATABASE_URL || 'postgresql://localhost:5434/portfolio';
+
 const db = new pg.Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'portfolio',
-    password: 'Averie1103',
-    port: 5434,
+  connectionString,
+  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
 });
+
 db.connect()
 .then(() => console.log("Connected to database"))
 .catch((err) => {

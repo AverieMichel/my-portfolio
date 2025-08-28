@@ -1,0 +1,113 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict JEIeNPFrt5lQWluvDWHJzXscTOfOXD2yR8BazKpkVlSwDl0d7mO11wdqe0KmiRw
+
+-- Dumped from database version 17.6
+-- Dumped by pg_dump version 17.6 (Homebrew)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: portfolio_reviews; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.portfolio_reviews (
+    id integer NOT NULL,
+    name character varying(100),
+    email character varying(100),
+    review text,
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP
+);
+
+
+--
+-- Name: portfolio_reviews_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.portfolio_reviews_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: portfolio_reviews_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.portfolio_reviews_id_seq OWNED BY public.portfolio_reviews.id;
+
+
+--
+-- Name: portfolio_reviews id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.portfolio_reviews ALTER COLUMN id SET DEFAULT nextval('public.portfolio_reviews_id_seq'::regclass);
+
+
+--
+-- Data for Name: portfolio_reviews; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.portfolio_reviews (id, name, email, review, created_at) FROM stdin;
+1	averie	averiestrunk@gmail.com	averiestrunk@gmail.com	2025-08-21 23:01:29.724338
+2	dsaf	dfsdf	fdsaf	2025-08-21 23:03:04.282551
+3	fdadfds	dfasfda	fdsafdsa	2025-08-21 23:04:50.928189
+4	Averie Michel	averiestrunk@gmail.com	dsagfd	2025-08-21 23:09:34.283438
+5	Averie Michel	averiestrunk@gmail.com	gfdgds	2025-08-21 23:13:47.695048
+6	sdfdsa	fdsf	dsfdsa	2025-08-21 23:16:34.574559
+7	Averie Michel	averiestrunk@gmail.com	dsgdgs	2025-08-21 23:19:15.371011
+8	Averie	test@example.com	Great!	2025-08-21 23:23:26.101858
+9	Averie Michel	averiestrunk@gmail.com	jbnkhbbl	2025-08-21 23:25:32.109829
+10	Averie Michel	averiestrunk@gmail.com	dfsafdsa	2025-08-21 23:29:18.148117
+11	Averie Michel	averiestrunk@gmail.com	dfsfsa	2025-08-21 23:42:40.608055
+12	hvgjvk	ugujlgh	ugliug	2025-08-22 13:49:12.445739
+13	this is my name	this is the email	this is the review	2025-08-25 15:38:21.170062
+14	name	email	Your feedback helps improve the experience. Let me know what you liked or what could be better!!!!! Thank yoouuuuuuuuuuu	2025-08-25 16:21:16.578753
+15	Averie	michel	hello there	2025-08-25 16:35:47.22174
+16	dfgsgf	gfdsgfds	gfdsgfds	2025-08-25 16:36:47.585184
+17	dfadf	dsafdfsa	fdsafdsa	2025-08-25 16:37:48.887842
+18	dfsafd	fdsafdas	fdsafdas	2025-08-25 16:40:21.050416
+19	ds	ds	dsad	2025-08-25 16:40:53.313354
+\.
+
+
+--
+-- Name: portfolio_reviews_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.portfolio_reviews_id_seq', 19, true);
+
+
+--
+-- Name: portfolio_reviews portfolio_reviews_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.portfolio_reviews
+    ADD CONSTRAINT portfolio_reviews_pkey PRIMARY KEY (id);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict JEIeNPFrt5lQWluvDWHJzXscTOfOXD2yR8BazKpkVlSwDl0d7mO11wdqe0KmiRw
+
