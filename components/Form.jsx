@@ -1,4 +1,5 @@
 import React , {useState} from "react";
+import logo from '/images/freepik__background__32899.png';
 
 function Form () {
     const inputStyles = {
@@ -69,7 +70,7 @@ function Form () {
 
     return (
         <div className="form-container">
-            <img src="/images/freepik__background__32899.png" width='400px'></img>
+            <img src={logo} width='400px'></img>
             <form className="form" onSubmit={handleSubmit}>
                 <h3>Share your opinion with me!</h3>
                 {/* <h4 >name:</h4> */}
@@ -118,5 +119,3 @@ function Form () {
 }
 
 export default Form;
-
-//for attribute <a href="https://www.flaticon.com/free-icons/web-development" title="web development icons">Web development icons created by Muhammad Ali - Flaticon</a>

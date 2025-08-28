@@ -1,8 +1,9 @@
 import React from "react";
 import { useNavigate} from 'react-router-dom';
 import ButtonStyles from "../components/ButtonStyles";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import fbook from '/images/facebook.png';
+import bitmoji from '/images/PNG image-D3AB4FCC421F-1.png';
+import insta from '/images/insta.png';
 
 
 function Contact() {
@@ -26,7 +27,6 @@ function Contact() {
     letterSpacing: "2px",
     cursor: "pointer",
     transition: "all 0.3s ease",
-    // width: "fit-content",
     textShadow: "whitesmoke",
   };
 
@@ -39,9 +39,9 @@ function Contact() {
             </div> 
             <div className="contact-page">
                 <div className="contact-left">
-                    <img src="/images/PNG image-D3AB4FCC421F-1.png" width='300px'></img>
-                    <a id="fbook" href='https://www.facebook.com/averie.strunk.5/'><img src="/images/facebook.png" width='40px'></img></a>
-                    <a href='https://www.instagram.com/averielinn?igsh=dmdnZjgxcDlua3dn&utm_source=qr'><img src="/images/insta.png" width='40px'></img></a>
+                    <img src={bitmoji} width='300px'></img>
+                    <a id="fbook" href='https://www.facebook.com/averie.strunk.5/'><img src={fbook} width='40px'></img></a>
+                    <a href='https://www.instagram.com/averielinn?igsh=dmdnZjgxcDlua3dn&utm_source=qr'><img src={insta} width='40px'></img></a>
                 </div>
                 <div className="contact-right">
                     <h1>Averie Michel</h1>

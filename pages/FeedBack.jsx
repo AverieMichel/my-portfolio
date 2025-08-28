@@ -72,29 +72,3 @@ function Feedback() {
 }
 
 export default Feedback;
-
-// {/* <div className="feedback">
-// <div className="filler">
-//  <h2>Share your opinion with me!</h2> */}
-// <p>Your feedback helps improve the experience. Let me know what you liked or what could be better!</p>
-// <ul className="review-tips">
-//   <li>What did you enjoy the most?</li>
-//   <li>Was anything confusing?</li>
-//   <li>How can this page be more helpful?</li>
-// </ul>
-// </div>
-// <Form />
-// <ul className="reviews">
-//     {reviews.length === 0 ? (
-//     <p>No reviews yet!</p>
-//     ) : (
-//     reviews.map((rev) => (
-//     <li key={rev.id} style={{ border: '1px solid white', margin: '10px', padding: '10px' }}>
-//     <h4>{rev.name}</h4>
-//     <p>{rev.review}</p>
-//     <small>{new Date(rev.created_at).toLocaleString()}</small>
-//     </li>
-//         ))
-//     )}
-// </ul>
-// </div>  */}

@@ -7,7 +7,6 @@ function Home() {
   const navigate = useNavigate(); 
 
   const buttonContent = [
-    // { label: 'Home', path: '/'},
     { label: 'Resume', path: '/Resume'},
     { label: 'Projects', path: '/Projects'},
     { label: 'Contact', path: '/Contact'},

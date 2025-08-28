@@ -1,6 +1,4 @@
-// ScrollReveal.jsx
 import { useEffect, useRef, useState } from "react";
-// import "../styles.css"; // import the CSS file
 
 function ScrollReveal({ children, className = "" }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +9,7 @@ function ScrollReveal({ children, className = "" }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // stop observing after reveal
+          observer.disconnect();
         }
       },
       { threshold: 0.2 }

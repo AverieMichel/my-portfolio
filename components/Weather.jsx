@@ -6,7 +6,6 @@ function Weather () {
     const [error, setError] = useState(null)
     
     useEffect(() => {
-        // Ask for user location
         navigator.geolocation.getCurrentPosition(
           async (position) => {
             const { latitude, longitude } = position.coords;
