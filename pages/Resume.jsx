@@ -5,8 +5,8 @@ import ButtonStyles from "../components/ButtonStyles";
 import { motion } from "framer-motion";
 import ResumeButton from "../components/ResumeButton";
 import ScrollReveal from "../components/ScrollReveal";
-import bitmoji from '/images/PNG image-D3AB4FCC421F-1.png';
-import timeline from '/images/timeline.png';
+import bitmoji from '../public/images/PNG image-D3AB4FCC421F-1.png';
+import timeline from '../public/images/timeline.png';
 
 function Resume() {
     const navigate = useNavigate(); 

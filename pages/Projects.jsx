@@ -4,8 +4,8 @@ import { useNavigate} from 'react-router-dom';
 import ButtonStyles from "../components/ButtonStyles";
 import ScrollReveal from "../components/ScrollReveal";
 import { motion } from "framer-motion";
-import keeper from '/images/TheKeeperApp.exmaple.png';
-import movie from '/images/movies.example.mov';
+import keeper from '../public/images/TheKeeperApp.exmaple.png';
+import movie from '../public/images/movies.example.mov';
 
 function Projects() {
     const navigate = useNavigate(); 

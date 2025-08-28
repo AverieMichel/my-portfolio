@@ -14,7 +14,6 @@ function Home() {
 ];
 
   return (
-    // <Biography /> 
     <div className="home-container">
       <div className="title-container">
         <DiamondIcon className="icon" />
@@ -26,9 +25,7 @@ function Home() {
                 <ButtonStyles onClick={() => navigate(path)} content={label} path={path} key={index} />
             ))}        
       </div>
-
     </div>
-
   )
 }
 

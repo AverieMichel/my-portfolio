@@ -1,5 +1,5 @@
 import React , {useState} from "react";
-import logo from '/images/freepik__background__32899.png';
+import logo from '../public/images/freepik__background__32899.png';
 
 function Form () {
     const inputStyles = {

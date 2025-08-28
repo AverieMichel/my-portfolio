@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate} from 'react-router-dom';
 import ButtonStyles from "../components/ButtonStyles";
-import fbook from '/images/facebook.png';
-import bitmoji from '/images/PNG image-D3AB4FCC421F-1.png';
-import insta from '/images/insta.png';
+import fbook from '../public/images/facebook.png';
+import bitmoji from '../public/images/PNG image-D3AB4FCC421F-1.png';
+import insta from '../public/images/insta.png';
 
 
 function Contact() {
