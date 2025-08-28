@@ -10,7 +10,7 @@ function Weather () {
           async (position) => {
             const { latitude, longitude } = position.coords;
             try {
-              const response = await axios.get('/weather', {
+              const response = await axios.get('https://my-port-back-3cd7b6fcf498.herokuapp.com/weather', {
                 params: { lat: latitude, lon: longitude }
               });
               setWeather(response.data);

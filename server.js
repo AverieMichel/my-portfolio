@@ -2,14 +2,14 @@ import axios from 'axios';
 import express  from 'express';
 import cors from 'cors';
 import pg from 'pg';
+import dotenv from 'dotenv';
 
 const err = 404;
-const key = '1e1eee85fc9746b0b6130523250708';
-
-// http://api.weatherapi.com/v1/current.json?key=1e1eee85fc9746b0b6130523250708&q=73529&aqi=n
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const apiKey = process.env.WEATHER_API_KEY;
 app.use(cors());
 // Parse JSON bodies
 
@@ -67,7 +67,7 @@ app.get('/weather', async (req, res) => {
     try {
     const result = await axios.get('http://api.weatherapi.com/v1/current.json', {
         params: {
-            key: key,
+            key: apiKey,
             q: `${lat},${lon}`,
             aqi:'no'
         }
