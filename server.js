@@ -21,11 +21,15 @@ app.use(cors());
 //     port: 5434,
 // });
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://localhost:5434/portfolio';
+const connectionString = process.env.DATABASE_URL;
+if (!connectionString) {
+  console.error('Error: DATABASE_URL is not set.');
+  process.exit(1);
+}
 
 const db = new pg.Client({
   connectionString,
-  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
+  ssl: { rejectUnauthorized: false },
 });
 
 db.connect()
