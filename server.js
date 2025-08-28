@@ -44,7 +44,7 @@ app.use(express.json());
 // Parse URL-encoded bodies
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/reviews', async (req, res) => {
+app.post('https://my-port-back-3cd7b6fcf498.herokuapp.com/reviews', async (req, res) => {
     // console.log("🔥 Incoming POST request");
     // console.log("Headers:", req.headers);
     // console.log("Body:", req.body);
@@ -69,7 +69,7 @@ app.post('/reviews', async (req, res) => {
     }    
 });
 
-app.get('/weather', async (req, res) => {
+app.get('https://my-port-back-3cd7b6fcf498.herokuapp.com/weather', async (req, res) => {
     const {lat, lon} = req.query;
 
     if (!lat || !lon) {
@@ -91,7 +91,7 @@ app.get('/weather', async (req, res) => {
 
 });
 
-app.get('/reviews', async (req, res) => {
+app.get('https://my-port-back-3cd7b6fcf498.herokuapp.com/reviews', async (req, res) => {
     try {
       const result = await db.query('SELECT * FROM portfolio_reviews ORDER BY created_at DESC');
       res.json(result.rows);
