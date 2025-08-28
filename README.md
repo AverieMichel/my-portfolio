@@ -7,7 +7,7 @@ Welcome to my personal developer portfolio — a responsive, **multi-page React 
 
 ## 🌐 Live Demo
 
-🔗 [View Portfolio](https://yourusername.github.io/your-repo-name)
+🔗 [View Portfolio](https://averiemichel.github.io/my-portfolio/)
 
 > Note: This project uses `HashRouter` to ensure client-side routing works on GitHub Pages.
 
