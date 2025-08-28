@@ -9,7 +9,7 @@ const key = '1e1eee85fc9746b0b6130523250708';
 // http://api.weatherapi.com/v1/current.json?key=1e1eee85fc9746b0b6130523250708&q=73529&aqi=n
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.use(cors());
 // Parse JSON bodies
 
