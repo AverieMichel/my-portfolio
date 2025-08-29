@@ -20,7 +20,7 @@ function Feedback() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('http://localhost:3001/reviews');
+        const response = await fetch('https://my-port-back-3cd7b6fcf498.herokuapp.com/reviews');
         if (response.ok) {
           const data = await response.json();
           setReviews(data);
