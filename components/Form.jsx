@@ -51,7 +51,7 @@ function Form () {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/reviews',{
+            const response = await fetch('https://my-port-back-3cd7b6fcf498.herokuapp.com/reviews',{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
