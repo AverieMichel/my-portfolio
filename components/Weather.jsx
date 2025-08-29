@@ -6,23 +6,34 @@ function Weather () {
     const [error, setError] = useState(null)
     
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(
-          async (position) => {
-            const { latitude, longitude } = position.coords;
-            try {
-              const response = await axios.get('https://my-port-back-3cd7b6fcf498.herokuapp.com/weather', {
-                params: { lat: latitude, lon: longitude }
-              });
-              setWeather(response.data);
-            } catch (err) {
-              setError("Failed to fetch weather data");
-            }
-          },
-          () => {
+      const fetchWeather = async () => {
+        try {
+          const getPosition = () =>
+            new Promise((resolve, reject) => {
+              navigator.geolocation.getCurrentPosition(resolve, reject);
+            });
+    
+          const position = await getPosition();
+          const { latitude, longitude } = position.coords;
+    
+          const response = await axios.get(
+            "https://my-port-back-3cd7b6fcf498.herokuapp.com/weather",
+            { params: { lat: latitude, lon: longitude } }
+          );
+    
+          setWeather(response.data);
+        } catch (err) {
+          console.error("Weather fetch error:", err.response || err.message);
+          if (err.code === 1) {
             setError("Geolocation permission denied");
+          } else {
+            setError("Failed to fetch weather data");
           }
-        );
-      }, []);
+        }
+      };
+    
+      fetchWeather();
+    }, []);
     
       console.log(weather);
 
