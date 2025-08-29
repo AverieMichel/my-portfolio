@@ -7,7 +7,7 @@ import ScrollReveal from "../components/ScrollReveal";
 function Feedback() {
     const navigate = useNavigate(); 
     const [reviews, setReviews] = useState([]);
-
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
     const buttonContent = [
       { label: 'Home', path: '/'},
@@ -20,7 +20,7 @@ function Feedback() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('https://my-port-back-3cd7b6fcf498.herokuapp.com/reviews');
+        const response = await fetch(`${API_BASE_URL}/reviews`);
         if (response.ok) {
           const data = await response.json();
           setReviews(data);
