@@ -4,7 +4,6 @@ import axios from "axios";
 function Weather () {
     const [weather, setWeather] = useState(null);
     const [error, setError] = useState(null)
-    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
       const fetchWeather = async () => {
@@ -18,7 +17,7 @@ function Weather () {
           const { latitude, longitude } = position.coords;
     
           const response = await axios.get(
-            `${API_BASE_URL}/weather`,
+            `https://my-port-back-3cd7b6fcf498.herokuapp.com/weather`,
             { params: { lat: latitude, lon: longitude } }
           );
     

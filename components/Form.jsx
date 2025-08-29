@@ -36,7 +36,6 @@ function Form () {
       };
 
     const err = 404;
-    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const [showDeleteNotice, setDeleteNotice] = useState(false);
     const [formData, setFormData] = useState({
         name:'',
@@ -52,7 +51,7 @@ function Form () {
         e.preventDefault();
 
         try {
-            const response = await fetch(`${API_BASE_URL}/reviews`,{
+            const response = await fetch(`https://my-port-back-3cd7b6fcf498.herokuapp.com/reviews`,{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
