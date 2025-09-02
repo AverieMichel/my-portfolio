@@ -500,12 +500,12 @@ footer {
     width: fit-content;
     justify-content: center;
     margin-left: 15px;
-    margin-top: -30px;
   }
 
   .home-container {
     margin: 10px 0 100px 0; 
     padding: 0;
+    margin-left: -15px;
   }
 
   .buttonStyles {
@@ -523,7 +523,7 @@ footer {
     padding-top: 20px;
   }
   .buttonStyles-resume {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
   .contact-page {
@@ -532,7 +532,7 @@ footer {
     gap: 15px;
   }
   .buttonStyles-resume button {
-    width: 125px;
+    width: 117px;
   }
   .contact-right {
     gap: 10px;
@@ -569,7 +569,6 @@ footer {
   .bio {
     grid-template-columns: 1fr;
     grid-template-rows: 200px 100px 200px 300px;
-    margin-top: -25px;
   }
   .bio p {
     font-size: small;
