@@ -508,9 +508,8 @@ footer {
   }
 
   .home-container {
-    margin: 0; 
+    margin: 5px 10px 5px 10px; 
     padding: 0;
-    margin-left: -15px;
     transform: scale(1.1);
   }
 
