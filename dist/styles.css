@@ -612,14 +612,14 @@ footer {
   }
 
   .experience img {
-    margin: 0;
+    margin-left: -25px;
     justify-self: center;
   }
   footer {
-    display: grid;
     color: whitesmoke;
-    margin-bottom: 20px;
-    align-self: end;
-    justify-self: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;    
   }
 }
