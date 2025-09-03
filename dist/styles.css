@@ -28,7 +28,7 @@ body {
   grid-template-columns: 1fr ;
   grid-template-rows: 20px 1fr 50px;
   align-items: center;
-  justify-content: start;
+  /* justify-content: start; */
   width: fit-content;
 }
 
