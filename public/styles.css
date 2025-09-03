@@ -50,7 +50,7 @@ body {
 
 .home-container {
   display: grid;
-  transform: scale(1.1);
+  transform: scale(1.7);
   padding-bottom: 20px;
   margin-bottom: 175px;
 }
@@ -62,6 +62,7 @@ body {
   grid-template-rows: 1fr 1fr;
   justify-self: center;
   gap: 40px;
+  margin-right: 125px;
 }
 
 .buttonStyles-resume {
@@ -619,5 +620,7 @@ footer {
     color: whitesmoke;
     text-align: center;
     padding: 1rem; 
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
