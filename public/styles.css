@@ -485,7 +485,7 @@ footer {
     width: 650px;
   }
   .title-container {
-    margin: 75px 50px 15px 50px;
+    margin: 0;
   }
 }
 
@@ -523,6 +523,7 @@ footer {
     justify-self: center;
     gap: 30px;
     margin-top: 25px;
+    margin-left: 25px;
   }
 
   .title-container {
