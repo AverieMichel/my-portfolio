@@ -617,9 +617,7 @@ footer {
   }
   footer {
     color: whitesmoke;
-    display: flex;
-    justify-content: center; 
-    /* align-items: center;   */
-    height: 100vh;    
+    text-align: center;
+    padding: 1rem; 
   }
 }
