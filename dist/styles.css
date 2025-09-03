@@ -28,7 +28,7 @@ body {
   grid-template-columns: 1fr ;
   grid-template-rows: 20px 1fr 50px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   width: fit-content;
 }
 
@@ -64,6 +64,7 @@ body {
   gap: 40px;
   margin-right: 125px;
   margin-top: 25px;
+  padding-bottom: 20px;
 }
 
 .buttonStyles-resume {
